@@ -4,7 +4,7 @@ import JSXComponent from 'metal-jsx';
 
 class Signin extends JSXComponent {
     msg() {
-		alert("Successfully Logged In");
+		alert("Successfully Logged In...");
 	}
     render() {
         return (

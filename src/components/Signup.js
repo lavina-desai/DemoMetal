@@ -5,7 +5,7 @@ import JSXComponent from 'metal-jsx';
 class Signup extends JSXComponent { 
 	msg()
 	{
-		alert("Login Successfully");
+		alert("Login Successfully....");
 	}
     render() {
         return (
