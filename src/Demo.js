@@ -4,21 +4,16 @@ import JSXComponent from 'metal-jsx';
 
 import './demo.scss';
 import SearchBarComponent from './components/search-bar';
+import Forgetpassword from './components/Forget-password';
 
 class Demo extends JSXComponent {
 	render() {
 		return <div class="demo">
-			Hello World
-			<SearchBarComponent
-			events={{
-				onSearch: this.handleOnSearch.bind(this)
-			}}></SearchBarComponent>
+			<Forgetpassword></Forgetpassword>
 			</div>;
 	}
+	
 
-	handleOnSearch(event) {
-        console.log(event.text);
-    }
 }
 
 export { Demo };
