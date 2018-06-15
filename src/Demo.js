@@ -4,15 +4,12 @@ import JSXComponent from 'metal-jsx';
 
 import './demo.scss';
 import SearchBarComponent from './components/search-bar';
+import { Signup } from './components/Signup';
 
 class Demo extends JSXComponent {
 	render() {
 		return <div class="demo">
-			Hello World
-			<SearchBarComponent
-			events={{
-				onSearch: this.handleOnSearch.bind(this)
-			}}></SearchBarComponent>
+			<Signup></Signup>	
 			</div>;
 	}
 
