@@ -6,6 +6,8 @@ import './demo.scss';
 import SearchBarComponent from './components/search-bar';
 import Signin from './components/Signin';
 import { Resetpassword } from './components/Resetpassword';
+import Forgetpassword from './components/Forget-password';
+
 
 class Demo extends JSXComponent {
 	render() {
@@ -22,11 +24,18 @@ class Demo extends JSXComponent {
 			<Resetpassword></Resetpassword>
 
 		</div>;
+			<div>
+			<Forgetpassword></Forgetpassword>
+			</div>;
+
 	}
+	
+
 
 	handleOnSearch(event) {
 		console.log(event.text);
 	}
+
 
 }
 
