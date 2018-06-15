@@ -10,11 +10,17 @@ import { Signup } from './components/Signup';
 import Signin from './components/Signin';
 import { Resetpassword } from './components/Resetpassword';
 import Forgetpassword from './components/Forget-password';
+import Table from './components/Table';
+import Pagination from './components/Pagination';
 
 
 class Demo extends JSXComponent {
 	render() {
 		return <div class="demo">
+
+	
+			<Pagination></Pagination>
+			<br /><br /><br />
 			<Signup></Signup>	
 
 			Hello World
@@ -27,16 +33,18 @@ class Demo extends JSXComponent {
 			<Signin></Signin>
 			<br /><br /><br />
 			<Resetpassword></Resetpassword>
-
-		</div>;
-			<div>
+			<br /><br /><br />
 			<Forgetpassword></Forgetpassword>
+			<br /><br /><br />
+			<Table></Table>
+		
+		</div>;
+		
 
-			</div>;
+		
 
 	}
 	
-
 
 	handleOnSearch(event) {
 		console.log(event.text);

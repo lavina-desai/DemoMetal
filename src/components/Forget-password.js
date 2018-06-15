@@ -15,7 +15,7 @@ class Forgetpassword extends JSXComponent {
                     <label for="username"> Enter Username: <input type="text" placeholder="Username"  name="username" /> </label><br /><br />
                     <button type="submit" id="space" class="btn btn-primary" onClick={this.submitMsg.bind(this)}>Submit</button>
                     <button type="submit" class="btn btn-primary">SignIn</button>
-                </center>
+                </center>   <hr/>
 
             </form>
         );

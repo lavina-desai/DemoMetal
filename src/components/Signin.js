@@ -23,7 +23,7 @@ class Signin extends JSXComponent {
                 </label>
                 <br /><br/>
                 <button onClick={this.msg.bind(this)} type="submit" class="btn btn-primary">Submit</button>
-                </center>
+                </center>   <hr/>
             </form>
         );
     }

@@ -36,9 +36,9 @@ class Signup extends JSXComponent {
 				<br/><br/>
 				<button type="submit" class="btn btn-primary" onClick={this.msg.bind(this)}>Register</button>
 				</center>
-
+				<hr/>
             </form>
-            
+         
         );
     }
 }
