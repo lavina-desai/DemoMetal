@@ -1,0 +1,68 @@
+{
+	"name": "metal-demo",
+	"version": "0.0.0",
+	"description": "MyDemoProj",
+	"license": "BSD",
+	"repository": "lavina-desai/metal-demo",
+	"engines": {
+		"node": ">=0.12.0",
+		"npm": ">=3.0.0"
+	},
+	"main": "lib/Demo.js",
+	"jsnext:main": "src/Demo.js",
+	"files": [
+		"lib",
+		"src",
+		"test"
+	],
+	"scripts": {
+		"build": "webpack",
+		"compile": "babel --presets metal -d lib/ src/",
+		"postinstall": "npm run build",
+		"prepublish": "npm run compile",
+		"start": "http-server . -p 4000",
+		"test": "karma start"
+	},
+	"keywords": [
+		"metal"
+	],
+	"babel": {
+		"presets": [
+			"metal",
+			"metal-jsx"
+		]
+	},
+	"dependencies": {
+		"bootstrap": "^3.3.6",
+		"metal-jsx": "^2.0.0"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.4.5",
+		"babel-core": "^6.25.0",
+		"babel-loader": "^7.0.0",
+		"babel-plugin-transform-node-env-inline": "^0.1.1",
+		"babel-preset-metal": "^4.0.0",
+		"babel-preset-metal-jsx": "^0.0.2",
+		"css-loader": "^0.28.4",
+		"extract-text-webpack-plugin": "^3.0.0",
+		"http-server": "^0.11.1",
+		"identity-obj-proxy": "^3.0.0",
+		"jest": "^20.0.4",
+		"karma-sourcemap-loader": "^0.3.7",
+		"karma-webpack": "^2.0.4",
+		"metal-karma-config": "^2.3.1",
+		"node-sass": "^4.5.3",
+		"sass-loader": "^6.0.6",
+		"style-loader": "^0.18.2",
+		"webpack": "^3.0.0"
+	},
+	"jest": {
+		"resolver": "metal-lerna-jest-resolver",
+		"snapshotSerializers": [
+			"metal-jest-serializer"
+		],
+		"moduleNameMapper": {
+			"^.+\\.scss$": "identity-obj-proxy"
+		}
+	}
+}
