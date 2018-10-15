@@ -1,12 +1,13 @@
 'use strict';
 
 import JSXComponent from 'metal-jsx';
+import core from 'metal-jsx';
 
 class Signin extends JSXComponent {
-    msg() {
-		alert("Successfully Logged In...");
-	}
+   
     render() {
+
+        const emailLink = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+.(?:\.[a-zA-Z0-9-]+)*$/
         return (
             <form>
                 <center>
@@ -14,20 +15,36 @@ class Signin extends JSXComponent {
                 <label for="email">
                     Email:
 				<input name="email" type="email"/>
+                {this.state.email}
                 </label>
                 <br /><br />
 
                 <label for="password">
                     Password:
 				<input  name="password" type="password"/>
+                {this.props.password}
                 </label>
                 <br /><br/>
-                <button onClick={this.msg.bind(this)} type="submit" class="btn btn-primary">Submit</button>
+                <button  type="submit" class="btn btn-primary">Submit</button>
                 </center>   <hr/>
             </form>
         );
     }
 };
+
+Signin.State = {
+    email: {
+        validator: core.emailLink,
+        value:''     
+    }
+}
+
+Signin.PROPS = {
+    password: {
+        validator: core.isString,
+        value: ''
+    }
+}
 
 export { Signin }
 export default Signin;
